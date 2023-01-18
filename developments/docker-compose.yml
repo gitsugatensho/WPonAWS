@@ -6,10 +6,10 @@ services:
     ports:
       - "8000:80"
     environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: root
-      WORDPRESS_DB_NAME: blog_db_name
+      WORDPRESS_DB_HOST: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
       WORDPRESS_CONFIG_EXTRA: |
         /* If you want to add any extra wordpress config */
         # define('WP_ALLOW_MULTISITE', true );
@@ -21,10 +21,10 @@ services:
     logging:
       driver: none
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_USERNAME: root
-      MYSQL_PASSWORD: root
-      MYSQL_DATABASE: blog_db_name
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_USERNAME: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
     volumes:
       - db:/var/lib/mysql
 volumes:
